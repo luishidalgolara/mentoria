@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS SaaS - Premium Software Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo" onclick="showPage('home')">NEXUS</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#" onclick="showPage('home')">Inicio</a></li>
+                    <li><a href="#" onclick="showPage('software')">Software</a></li>
+                    <li><a href="#" onclick="showPage('dashboard')">Mi Dashboard</a></li>
+                    <li><a href="#" onclick="showPage('about')">Nosotros</a></li>
+                    <li><a href="#" onclick="showPage('contact')">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">
+                    🌙
+                </button>
+                <button class="register-btn" id="registerBtn" onclick="showAuthModal('register')">
+                    👤 INICIAR SESIÓN
+                </button>
+                <div class="user-menu" id="userMenu" style="display: none;">
+                    <button class="user-profile-btn" id="userProfileBtn">
+                        <span id="userName">Usuario</span> 👤
+                    </button>
+                    <div class="subscription-status" id="subscriptionStatus">
+                        <span class="status-text">Plan: <span id="currentPlan">Free</span></span>
+                    </div>
+                    <button class="logout-btn" onclick="logout()">Salir</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="floating-elements" id="floatingElements"></div>
+            <div class="hero-content">
+                <h1>NEXUS SaaS</h1>
+                <p class="hero-subtitle">Software Premium en la Nube</p>
+                <a href="#" class="cta-button" onclick="showPage('software')">Explorar Software</a>
+            </div>
+        </section>
+
+        <!-- Featured Software -->
+        <section class="section">
+            <h2 class="section-title">Software Elite</h2>
+            <p class="section-subtitle">Aplicaciones de vanguardia para profesionales</p>
+            
+            <div class="software-grid" id="featuredSoftware">
+                <!-- Software will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="section">
+                <h2 class="section-title">¿Por qué NEXUS SaaS?</h2>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Acceso Instantáneo</h3>
+                        <p>Software listo para usar sin instalaciones complejas</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔐</div>
+                        <h3>Seguridad Cyber</h3>
+                        <p>Encriptación de nivel militar para todos tus datos</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <h3>Actualizaciones Automáticas</h3>
+                        <p>Siempre la versión más reciente sin intervención manual</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Soporte 24/7</h3>
+                        <p>Asistencia técnica especializada disponible siempre</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Software Page -->
+    <div id="software" class="page">
+        <div style="padding-top: 120px;">
+            <section class="section">
+                <h2 class="section-title">Catálogo Software</h2>
+                <p class="section-subtitle">Descubre toda nuestra suite de aplicaciones</p>
+                
+                <div class="software-grid" id="allSoftware">
+                    <!-- All software will be loaded here -->
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div id="dashboard" class="page">
+        <div style="padding-top: 120px;">
+            <section class="section">
+                <h2 class="section-title">Mi Dashboard</h2>
+                <div class="dashboard-container" id="dashboardContainer">
+                    <div class="no-access-message">
+                        <h3>🔐 Acceso Restringido</h3>
+                        <p>Inicia sesión y suscríbete para acceder a tu dashboard personalizado</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <div style="padding-top: 120px;">
+            <section class="section">
+                <h2 class="section-title">Sobre NEXUS SaaS</h2>
+                <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <p style="font-size: 1.3rem; line-height: 1.8; margin-bottom: 2rem; color: var(--text-secondary);">
+                        NEXUS SaaS representa la evolución del software empresarial. Desarrollamos 
+                        aplicaciones que se ejecutan directamente en tu navegador con la potencia de la nube.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary);">
+                        Nuestra misión es democratizar el acceso a software de clase mundial, 
+                        eliminando barreras técnicas y ofreciendo soluciones escalables para cualquier negocio.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <div style="padding-top: 120px;">
+            <section class="section">
+                <h2 class="section-title">Conexión Neural</h2>
+                <p class="section-subtitle">Establece comunicación con nuestro equipo</p>
+                
+                <form class="contact-form" onsubmit="handleContactForm(event)">
+                    <div class="form-group">
+                        <label for="name">Identificación</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Canal de Comunicación</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Protocolo</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Transmisión</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Iniciar Transmisión</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <!-- Software Application Modal -->
+    <div class="app-overlay" id="appOverlay" onclick="closeApp()">
+        <div class="app-modal" onclick="event.stopPropagation()">
+            <div class="app-header">
+                <h2 id="appTitle">Aplicación</h2>
+                <button class="close-app" onclick="closeApp()">×</button>
+            </div>
+            <div class="app-content" id="appContent">
+                <!-- App content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>NEXUS SaaS</h3>
+                <p>La evolución del software empresarial</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navegación</h3>
+                <p><a href="#" onclick="showPage('home')">Inicio</a></p>
+                <p><a href="#" onclick="showPage('software')">Software</a></p>
+                <p><a href="#" onclick="showPage('contact')">Contacto</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Comunicación</h3>
+                <p>📡 contact@nexussaas.com</p>
+                <p>🔗 +1 (555) NEXUS-01</p>
+                <p>🌐 Cloud District, Tech Valley</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NEXUS SaaS Platform. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Authentication Modals -->
+    <div class="auth-overlay" id="authOverlay" onclick="hideAuthModal()">
+        <div class="auth-modal" onclick="event.stopPropagation()">
+            <div class="auth-header">
+                <h2 id="authTitle">REGISTRO NEURAL</h2>
+                <button class="close-auth" onclick="hideAuthModal()">×</button>
+            </div>
+            
+            <!-- Register Form -->
+            <form class="auth-form" id="registerForm" onsubmit="handleRegister(event)">
+                <div class="form-group">
+                    <label for="regEmail">EMAIL</label>
+                    <input type="email" id="regEmail" name="email" placeholder="tu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">CONTRASEÑA</label>
+                    <input type="password" id="regPassword" name="password" placeholder="Mínimo 6 caracteres" required minlength="6">
+                </div>
+                <button type="submit" class="auth-submit-btn">CREAR CUENTA</button>
+                
+                <div class="auth-divider">
+                    <span>O continúa con</span>
+                </div>
+                
+                <button type="button" class="google-auth-btn" onclick="loginWithGoogle()">
+                    <span class="google-icon">🔍</span>
+                    Continuar con Google
+                </button>
+                
+                <p class="auth-switch">¿Ya tienes cuenta? <a href="#" onclick="showAuthModal('login')">Iniciar Sesión</a></p>
+            </form>
+            
+            <!-- Login Form -->
+            <form class="auth-form" id="loginForm" onsubmit="handleLogin(event)" style="display: none;">
+                <div class="form-group">
+                    <label for="loginEmail">EMAIL</label>
+                    <input type="email" id="loginEmail" name="email" placeholder="tu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">CONTRASEÑA</label>
+                    <input type="password" id="loginPassword" name="password" placeholder="Tu contraseña" required>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="rememberMe">
+                    <label for="rememberMe">Recordar sesión</label>
+                </div>
+                <button type="submit" class="auth-submit-btn">INICIAR SESIÓN</button>
+                
+                <div class="auth-divider">
+                    <span>O continúa con</span>
+                </div>
+                
+                <button type="button" class="google-auth-btn" onclick="loginWithGoogle()">
+                    <span class="google-icon">🔍</span>
+                    Continuar con Google
+                </button>
+                
+                <p class="auth-switch">¿No tienes cuenta? <a href="#" onclick="showAuthModal('register')">Crear Cuenta</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Subscription Modal -->
+    <div class="subscription-overlay" id="subscriptionOverlay" onclick="hideSubscriptionModal()">
+        <div class="subscription-modal" onclick="event.stopPropagation()">
+            <div class="subscription-header">
+                <h2 id="subscriptionTitle">PLANES DE SUSCRIPCIÓN</h2>
+                <button class="close-subscription" onclick="hideSubscriptionModal()">×</button>
+            </div>
+            <div class="subscription-content">
+                <div class="plans-grid">
+                    <div class="plan-card" data-plan="basic">
+                        <h3>PLAN BÁSICO</h3>
+                        <div class="plan-price">$9.99<span>/mes</span></div>
+                        <ul class="plan-features">
+                            <li>✅ Acceso a aplicaciones básicas</li>
+                            <li>✅ Almacenamiento 5GB</li>
+                            <li>✅ Soporte por email</li>
+                            <li>❌ Apps avanzadas</li>
+                        </ul>
+                        <button class="subscribe-btn" onclick="subscribe('basic', 9.99)">SUSCRIBIRSE</button>
+                    </div>
+                    <div class="plan-card featured" data-plan="pro">
+                        <div class="plan-badge">POPULAR</div>
+                        <h3>PLAN PRO</h3>
+                        <div class="plan-price">$29.99<span>/mes</span></div>
+                        <ul class="plan-features">
+                            <li>✅ Todas las aplicaciones</li>
+                            <li>✅ Almacenamiento 100GB</li>
+                            <li>✅ Soporte prioritario</li>
+                            <li>✅ Funciones avanzadas</li>
+                        </ul>
+                        <button class="subscribe-btn" onclick="subscribe('pro', 29.99)">SUSCRIBIRSE</button>
+                    </div>
+                    <div class="plan-card" data-plan="enterprise">
+                        <h3>PLAN ENTERPRISE</h3>
+                        <div class="plan-price">$99.99<span>/mes</span></div>
+                        <ul class="plan-features">
+                            <li>✅ Acceso completo</li>
+                            <li>✅ Almacenamiento ilimitado</li>
+                            <li>✅ Soporte 24/7</li>
+                            <li>✅ API personalizada</li>
+                        </ul>
+                        <button class="subscribe-btn" onclick="subscribe('enterprise', 99.99)">SUSCRIBIRSE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
