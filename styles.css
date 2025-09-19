@@ -421,7 +421,7 @@ body {
 
 .hero h1 {
     font-family: 'Orbitron', monospace;
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     font-weight: 900;
     margin-bottom: 1.5rem;
     background: var(--gradient-neon);
@@ -429,9 +429,10 @@ body {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 50px rgba(0, 212, 255, 0.5);
-    line-height: 1.2;
+    line-height: 1.1;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+    
 }
 
 .hero-subtitle {
