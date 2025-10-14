@@ -323,7 +323,7 @@ function loginWithGoogle() {
         localStorage.setItem('nexusUser', JSON.stringify(currentUser));
         localStorage.setItem('nexusSubscription', JSON.stringify(userSubscription));
         
-        alert('✅ CONECTADO CON GOOGLE\n\n¡Bienvenido a NEXUS SaaS!');
+        alert('✅ CONECTADO CON GOOGLE\n\n¡Bienvenido a Mentor-IA!');
         
         hideAuthModal();
         updateAuthUI();
