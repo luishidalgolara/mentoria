@@ -1,8 +1,8 @@
-// =========================================
-// NEXUS SAAS PLATFORM - JAVASCRIPT FUNCTIONS
-// =========================================
+// ==========================================
+// MENTOR-IA PLATAFORM - JAVASCRIPT FUNCTIONS
+// ==========================================
 
-// === GLOBAL VARIABLES ===
+//=== GLOBAL VARIABLES ===
 let currentUser = null;
 let userSubscription = null;
 
@@ -10,17 +10,17 @@ let userSubscription = null;
 const softwareCatalog = [
     {
         id: 1,
-        name: "Text Editor",
-        description: "Editor de texto simple y gratuito para tomar notas y escribir documentos básicos.",
+        name: "Comprender la mente detrás de la Inteligencia Artificial",
+        description: "Descubre cómo “piensa” una IA: sus técnicas, estructuras y el tipo de razonamiento que usa para aprender, decidir y adaptarse. Aprenderás a pensar como un ingeniero de IA: analítico, creativo y orientado a soluciones inteligentes.",
         icon: "📝",
-        requiredPlan: "free",
+        requiredPlan: "basic",
         category: "productivity",
-        features: ["Editor básico", "Guardar localmente", "Vista previa"]
+        features: ["Editor básico", "Guardar locamente", "Vista previa"]
     },
     {
         id: 2,
-        name: "Neural Designer",
-        description: "Editor de diseño gráfico con IA integrada para crear logotipos, banners y contenido visual profesional.",
+        name: "Diseño y arquitectura visual de aplicaciones y webs",
+        description: "Aprenderás a crear interfaces atractivas, funcionales y coherentes con la identidad de tu proyecto. Desde la elección de colores, tipografías y estilos visuales, hasta la estructura de navegación y arquitectura de la información, desarrollarás aplicaciones y sitios que no solo funcionan, sino que también ofrecen una experiencia intuitiva y profesional.",
         icon: "🎨",
         requiredPlan: "basic",
         category: "design",
@@ -28,17 +28,17 @@ const softwareCatalog = [
     },
     {
         id: 3,
-        name: "Code Matrix",
-        description: "IDE avanzado en la nube con autocompletado inteligente y debugging automatizado.",
+        name: "Desarrollaras pensamiento lógico-computacional",
+        description: "Entrena tu mente para razonar como una máquina. Aprenderás a traducir ideas complejas en pasos claros y estructuras de código, construyendo sistemas capaces de tomar decisiones automáticas y eficientes.",
         icon: "💻",
         requiredPlan: "pro",
         category: "development",
-        features: ["Sintaxis highlighting", "Debug IA", "Git integrado"]
+        features: ["Sintaxis highlighting", "Debug IA", "git integrado"]
     },
     {
         id: 4,
-        name: "Data Vision",
-        description: "Herramienta de análisis de datos con visualizaciones interactivas y machine learning.",
+        name: "Detectar patrones y comportamientos ocultos en los datos",
+        description: "La clave de la IA está en los datos. Dominarás técnicas para reconocer tendencias, relaciones y comportamientos en grandes volúmenes de información, y transformar esos hallazgos en decisiones inteligentes.",
         icon: "📊",
         requiredPlan: "pro",
         category: "analytics",
@@ -47,7 +47,7 @@ const softwareCatalog = [
     {
         id: 5,
         name: "Cloud Manager",
-        description: "Panel de control para administrar servidores y servicios en la nube de forma intuitiva.",
+        description: "Panel de control para administrar servidores y servicios en la nube de forma intuitiva",
         icon: "☁️",
         requiredPlan: "enterprise",
         category: "infrastructure",
@@ -55,42 +55,18 @@ const softwareCatalog = [
     },
     {
         id: 6,
-        name: "Neural Writer",
+        name: "Neural Whiter",
         description: "Editor de texto con IA que ayuda a crear contenido, corregir gramática y optimizar SEO.",
         icon: "✍️",
         requiredPlan: "basic",
         category: "content",
-        features: ["Corrección IA", "Optimización SEO", "Templates"]
+        features: ["Correción IA", "Optimización SEO", "Templates"]
     },
     {
         id: 7,
-        name: "Crypto Analytics",
-        description: "Plataforma de análisis de criptomonedas con alertas inteligentes y trading automatizado.",
-        icon: "₿",
-        requiredPlan: "pro",
-        category: "finance",
-        features: ["Trading bots", "Alertas personalizadas", "Portfolio tracking"]
-    },
-    {
-        id: 8,
-        name: "Social Nexus",
-        description: "Gestor de redes sociales con programación automática y análisis de engagement.",
-        icon: "📱",
-        requiredPlan: "basic",
-        category: "social",
-        features: ["Auto-posting", "Analytics", "Multi-account"]
-    },
-    {
-        id: 9,
-        name: "AI Assistant",
-        description: "Asistente personal con IA para automatizar tareas, gestionar calendario y procesar emails.",
-        icon: "🤖",
-        requiredPlan: "enterprise",
-        category: "productivity",
-        features: ["Automatización", "Calendario IA", "Email processing"]
-    }
-];
 
+    }
+]
 // === SUBSCRIPTION PLANS ===
 const subscriptionPlans = {
     free: {
