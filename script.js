@@ -218,7 +218,7 @@ function handleRegister(event) {
     localStorage.setItem('nexusSubscription', JSON.stringify(userSubscription));
     
     // Success feedback
-    alert('🚀 CUENTA CREADA CORRECTAMENTE\n\n⚡ ¡Bienvenido a NEXUS SaaS!');
+    alert('🚀 CUENTA CREADA CORRECTAMENTE\n\n⚡ ¡Bienvenido a Mentor-IA!');
     
     hideAuthModal();
     updateAuthUI();
